@@ -54,9 +54,8 @@ setData(response.data)
       
        axios.delete('https://web-template-editor-api.herokuapp.com/projects/project/'+e.target.value)
       .then((response) =>{
-
+        window.location.href='/Projectlist'
       } );
-      window.location.href='/Projectlist'
 
 
     }

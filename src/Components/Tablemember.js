@@ -50,10 +50,9 @@ setData(response.data)
       
        axios.delete('https://web-template-editor-api.herokuapp.com/members/member/'+e.target.value)
       .then((response) =>{
-        console.log("deleted")
-        
+        window.location.href='/Members'
+
       } );
-      window.location.href='/Members'
 
 
     }
