@@ -88,7 +88,7 @@ const[member_project,setMemberProject]=useState('')
                     <Col sm="10">
                         <Form.Control value={member_project} onChange={(e)=>setMemberProject(e.target.value)} type="text" placeholder="Project ID" />
                         {/* <Button className="mt-4 mb-4" style={{float: 'right'}}  onClick={submitData} variant="outline-primary"><a href="/Members"> Add Member</a></Button><br/> */}
-                        <Button onClick={submitData} className="mt-4 mb-4" style={{float: 'right'}}   variant="outline-primary" href="/Members">Add Member</Button><br/>
+                        <Button onClick={submitData} className="mt-4 mb-4" style={{float: 'right'}}   variant="outline-primary">Add Member</Button><br/>
 
 
                     </Col>
@@ -115,7 +115,10 @@ const[member_project,setMemberProject]=useState('')
         axios
         .post("https://web-template-editor-api.herokuapp.com/members/member", member)
         .then((response) => {
+
         });
+        window.location.href='/Members'
+
 }
 }
 export default Memberform

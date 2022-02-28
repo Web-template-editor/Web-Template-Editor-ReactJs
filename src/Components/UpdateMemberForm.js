@@ -97,7 +97,7 @@ useEffect(()=>{axios.get('https://web-template-editor-api.herokuapp.com/members/
                     <Col sm="10">
                         <Form.Control value={member_project} onChange={(e)=>setMemberProject(e.target.value)} type="text" placeholder="Project ID" />
                         {/* <Button className="mt-4 mb-4" style={{float: 'right'}}  onClick={submitData} variant="outline-primary"><a href="/Members"> Add Member</a></Button><br/> */}
-                        <Button onClick={submitData} className="mt-4 mb-4" style={{float: 'right'}}   variant="outline-primary" href="/Members">Update</Button><br/>
+                        <Button onClick={submitData} className="mt-4 mb-4" style={{float: 'right'}}   variant="outline-primary">Update</Button><br/>
 
 
                     </Col>
@@ -125,6 +125,8 @@ useEffect(()=>{axios.get('https://web-template-editor-api.herokuapp.com/members/
         .post("https://web-template-editor-api.herokuapp.com/members/member", member)
         .then((response) => {
         });
+        window.location.href='/Members'
+
 }
 }
 export default UpdateMemberForm
