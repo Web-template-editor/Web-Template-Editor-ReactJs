@@ -5,7 +5,7 @@ import { useParams } from "react-router-dom/cjs/react-router-dom.min";
 function Media(){
     var params=useParams()
     const[member,setMember]=useState([])
-    useEffect(()=>{axios.get('http://localhost:8080/members/member/'+params.id).then((response)=>{
+    useEffect(()=>{axios.get('https://web-template-editor-api.herokuapp.com/members/member/'+params.id).then((response)=>{
 setMember(response.data)
 
 

@@ -7,14 +7,14 @@ function Project (){
   var param=useParams()
     const[project,setProject]=useState([])
     const[datas,setDatas]=useState([])
-    useEffect(()=>{axios.get('http://localhost:8080/projects/project/'+param.id
+    useEffect(()=>{axios.get('https://web-template-editor-api.herokuapp.com/projects/project/'+param.id
     ).then((response)=>{
 
         setProject(response.data)
 
 
       })},[])
-    useEffect(()=>{axios.get('http://localhost:8080/members/membersbyprojectid/'+param.id
+    useEffect(()=>{axios.get('https://web-template-editor-api.herokuapp.com/members/membersbyprojectid/'+param.id
     ).then((response)=>{
 
         setDatas(response.data)

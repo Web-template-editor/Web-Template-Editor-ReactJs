@@ -17,7 +17,7 @@ const[member_email,setMemberEmail]=useState('')
 const[member_facebook,setMemberFb]=useState('')
 const[member_linkedin,setMemberLinkedin]=useState('')
 const[member_project,setMemberProject]=useState('')
-useEffect(()=>{axios.get('http://localhost:8080/members/member/'+params.id
+useEffect(()=>{axios.get('https://web-template-editor-api.herokuapp.com/members/member/'+params.id
 ).then((response)=>{
 
     setMemberId(response.data.memberId)
@@ -122,7 +122,7 @@ useEffect(()=>{axios.get('http://localhost:8080/members/member/'+params.id
     
     
         axios
-        .post("http://localhost:8080/members/member", member)
+        .post("https://web-template-editor-api.herokuapp.com/members/member", member)
         .then((response) => {
         });
 }

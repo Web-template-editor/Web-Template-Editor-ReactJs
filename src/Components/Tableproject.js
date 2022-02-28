@@ -4,7 +4,7 @@ import { Button, Table } from "react-bootstrap";
 function Tableproject(){
   const[data,setData]=useState([])
 
-  useEffect(()=>{axios.get('http://localhost:8080/projects/project/').then((response)=>{
+  useEffect(()=>{axios.get('https://web-template-editor-api.herokuapp.com/projects/project/').then((response)=>{
 setData(response.data)
 
 
@@ -52,7 +52,7 @@ setData(response.data)
 
       console.log(e.target.value)
       
-       axios.delete('http://localhost:8080/projects/project/'+e.target.value)
+       axios.delete('https://web-template-editor-api.herokuapp.com/projects/project/'+e.target.value)
       .then((response) =>{
 
         window.location.href='/Projectlist'

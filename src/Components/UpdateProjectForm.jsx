@@ -16,7 +16,7 @@ const[external_guide,setProjectExternalGuide]=useState('')
 const[internal_guide,setProjectInternalGuide]=useState('')
 const[project_description,setProjectDescription]=useState('')
 
-    useEffect(()=>{axios.get('http://localhost:8080/projects/project/'+params.id
+    useEffect(()=>{axios.get('https://web-template-editor-api.herokuapp.com/projects/project/'+params.id
     ).then((response)=>{
 
         setProjectId(response.data.projectid)
@@ -110,7 +110,7 @@ const[project_description,setProjectDescription]=useState('')
     
     
         axios
-        .put("http://localhost:8080/projects/project/"+project.projectid, project)
+        .put("https://web-template-editor-api.herokuapp.com/projects/project/"+project.projectid, project)
         .then((response) => {
         });
         window.location.href='/Projectlist'

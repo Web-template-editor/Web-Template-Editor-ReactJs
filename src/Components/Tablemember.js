@@ -4,7 +4,7 @@ import { Button, Table } from "react-bootstrap";
 function Tablemember(){
   const[data,setData]=useState([])
 
-  useEffect(()=>{axios.get('http://localhost:8080/members/member/').then((response)=>{
+  useEffect(()=>{axios.get('https://web-template-editor-api.herokuapp.com/members/member/').then((response)=>{
 setData(response.data)
 
 
@@ -48,7 +48,7 @@ setData(response.data)
 
       console.log(e.target.value)
       
-       axios.delete('http://localhost:8080/members/member/'+e.target.value)
+       axios.delete('https://web-template-editor-api.herokuapp.com/members/member/'+e.target.value)
       .then((response) =>{
         console.log("deleted")
         window.location.href='/Members'

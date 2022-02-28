@@ -6,7 +6,7 @@ function Header(){
   const[project,setProject]=useState([])
   //const[ide,setIde]=useState('')
 
-  useEffect(()=>{axios.get('http://localhost:8080/projects/project').then((response)=>{
+  useEffect(()=>{axios.get('https://web-template-editor-api.herokuapp.com/projects/project').then((response)=>{
     setProject(response.data)
 
   })},[])

@@ -10,7 +10,7 @@ function Welcome(){
  
     const[data,setData]=useState([])
 
-    useEffect(()=>{axios.get('http://localhost:8080/projects/project/').then((response)=>{
+    useEffect(()=>{axios.get('https://web-template-editor-api.herokuapp.com/projects/project/').then((response)=>{
 setData(response.data)
 
 
