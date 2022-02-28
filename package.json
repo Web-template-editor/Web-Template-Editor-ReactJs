@@ -1,5 +1,6 @@
 {
   "name": "finalweb-app",
+  "proxy":"https://web-template-editor-api.herokuapp.com/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
