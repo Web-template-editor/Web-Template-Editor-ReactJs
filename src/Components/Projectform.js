@@ -94,8 +94,8 @@ const[project_year,setProjectYear]=useState('')
         axios
         .post("https://web-template-editor-api.herokuapp.com/projects/project", employee)
         .then((response) => {
+            window.location.href='/Projectlist'
         });
-        window.location.href='/Projectlist'
 
 }
 

@@ -115,9 +115,8 @@ const[member_project,setMemberProject]=useState('')
         axios
         .post("https://web-template-editor-api.herokuapp.com/members/member", member)
         .then((response) => {
-
+            window.location.href='/Members'
         });
-        window.location.href='/Members'
 
 }
 }

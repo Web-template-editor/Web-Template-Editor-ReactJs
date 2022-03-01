@@ -112,8 +112,8 @@ const[project_description,setProjectDescription]=useState('')
         axios
         .put("https://web-template-editor-api.herokuapp.com/projects/project/"+project.projectid, project)
         .then((response) => {
+            window.location.href='/Projectlist'
         });
-        window.location.href='/Projectlist'
 
 
 }

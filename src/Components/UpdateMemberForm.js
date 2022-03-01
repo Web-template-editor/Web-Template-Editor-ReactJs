@@ -124,8 +124,9 @@ useEffect(()=>{axios.get('https://web-template-editor-api.herokuapp.com/members/
         axios
         .post("https://web-template-editor-api.herokuapp.com/members/member", member)
         .then((response) => {
+            window.location.href='/Members'
+
         });
-        window.location.href='/Members'
 
 }
 }
