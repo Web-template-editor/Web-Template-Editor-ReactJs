@@ -20,7 +20,7 @@ setData(response.data)
       <h1 className="sub-heading">PROJECTS</h1>
 
 <div className="row justify-content-center">
-<Table className="col-auto" striped bordered>
+<Table className="col-auto" bordered>
 <thead>
   <tr>
     <th width="100">YEAR</th>
@@ -34,7 +34,7 @@ setData(response.data)
               return(
                   
                   <tr key={key}>
-                     <td>2020-2022</td>
+                     <td>{val.projectYear}</td>
                         <td ><a href={"/Project/"+val.projectid}>{val.projectName}</a></td>
   
                   </tr>
